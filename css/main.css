@@ -182,17 +182,6 @@ img {
 	border-bottom: 5px solid #B0E1DF;
 }
 
-/*
-#menu:after {
-  position: absolute;    
-  top: -15px;
-  left: 95px;
-  content: "";
-  display: block;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-bottom: 20px solid white;
-}*/
 #menu ul, 
 #menu li, 
 #menu li a {
@@ -232,11 +221,14 @@ img {
 }
 
 .photo1{
-  background-image: url("../img/keyboard.jpg");
+  background-image: url("../img/clip.jpg");
+    background-attachment: local;    
+
 }
 
 .photo2{
-  background-image: url("../img/glasses.jpg");   
+  background-image: url("../img/glasses.jpg"); 
+    background-attachment: local;     
 }
     
 
@@ -262,10 +254,22 @@ img {
    line-height: 4rem;    
   }
     
-.photo{  
-  height: 30rem;
-}    
+  .photo{  
+  height: 45rem;
+ }     
 
+}
+
+.header{  
+  height: 100vh;
+  width: 100%;
+  background-image: url("../img/keyboard.jpg");
+  background-color:  transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  background-attachment: local;
 }
 
 @media only screen and (min-width: 70em) {
@@ -279,35 +283,71 @@ img {
     
         
  .photo{  
-  height: 27rem;
+  height: 45rem;
  } 
+    
+.photo1{
+   background-attachment: fixed;      
+}
+    
+.photo2{
+   background-attachment: fixed;      
+}   
+    
+.header{
+ background-attachment: fixed;
+}
 }
 
 .center{
  text-align: center;   
 }
  
-.header{  
-  height: 100vh;
-  width: 100%;
-  background-image: url("../img/martine2.jpg");
-  background-color:  transparent;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
+
+.header h2{
+  color: #fff;   
+  margin-top: 0;
+  font-size: 2.3rem;
+  font-weight: 100;    
+  padding-top: 15rem;    
 }
 
-.header2{  
-  height: 100vh;
-  width: 100%;
-  background-image: url("../img/404.jpg");
-  background-color:  transparent;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.logo-white{
+    width: 20%;
+    
 }
 
-.arrow{
+.header a{
+ text-decoration: none;    
+}
+
+.header h4{
+ font-size: 1.2rem;    
+ padding-top: 0.4rem;
+ line-height: 2.9rem;    
+ color: white;
+}
+
+@media only screen and (min-width: 45em) {
+
+.header h2{
+  font-size: 4rem;
+  font-weight: 100;    
+  padding-top: 15rem;    
+}
+
+.logo-white{
+    width: 10%;  
+}
+
+ .header h4{
+     font-size: 2rem;
+ }
+
+}
+
+
+.arrow{   
  width: 40%;
  padding-right: 19%;
  height:  100vh;   
@@ -319,7 +359,8 @@ img {
  padding-bottom: 2rem;    
 }
 
-.contain img{ 
+.arrow-img{ 
+   padding-top: 2rem; 
    max-width: 2rem;
 }
 
@@ -725,7 +766,8 @@ footer{
 
 .lb-overlay ul{
  padding: 0;
- margin: 0;    
+ margin: 0; 
+ overflow: scroll    
     
 }
 
@@ -737,12 +779,10 @@ footer{
 	left: 0px;
 	top: 0px;
 	padding: 0px;
-	z-index: 99;
 	text-align: center;
 	background: rgba(255, 255, 255, 0.95);
     z-index: 10001;
 }
-
 
 .lb-overlay > div{
 	position: relative;
@@ -770,34 +810,23 @@ footer{
 	top: 1px;
 	left: 45%;
 	text-align: center;
-	overflow: hidden;
+	overflow: scroll;
 	background: url(../img/x.png) no-repeat center center;
 	color: transparent;
 
 }
 
-.overlay-txt h2{
- font-size: 2.5rem;    
-}
 
 .lb-overlay img{
-	max-height: 100%;
 	position: relative;
 	opacity: 0;
+    width: 95%;
 	-webkit-transition: opacity 0.5s linear;
 	-moz-transition: opacity 0.5s linear;
 	-o-transition: opacity 0.5s linear;
 	-ms-transition: opacity 0.5s linear;
 	transition: opacity 0.5s linear;
 }
-
-.overlay-txt p{
- padding-left: 10%;
- width: 95%;  
- text-align: center;    
-}
-
-
 
 .lb-overlay:target {
 	width: auto;
@@ -844,17 +873,15 @@ x:-o-prefocus, .lb-overlay img {
 @media only screen and (min-width: 40em) {
      
     .lb-overlay img{
-        float: left;
-        width: 50%;
-        padding-left: 5%;
+    width: 60%;
     }
-    
-    .overlay-txt{
-      float: right;
-      width: 50%;
-      padding-left: 5%;
-      padding-top: 3.5rem;    
-    }
+}
+
+.parallax-section-1 {
+    height: 100vh;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 
